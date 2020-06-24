@@ -68,7 +68,7 @@ ul {
 }
 .skill {
   width: 84px;
-  position: absolute;
+  position: fixed;
   top: 192px;
   left: 95px;
 }
