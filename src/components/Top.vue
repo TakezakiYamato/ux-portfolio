@@ -1,5 +1,5 @@
 <template>
-  <v-container class="top">
+  <v-container id="top">
     <v-row>
       <v-col cols="2"></v-col>
       <v-col cols="10" class="contents">
@@ -14,7 +14,7 @@
           </v-col>
           <v-col cols="6">
             <div class="face">
-              <img src="../assets/Group-icon.png" alt="">
+              <img src="../assets/face.png" alt="">
             </div>
           </v-col>
         </v-row>
@@ -24,7 +24,7 @@
 </template>
 
 <style scoped>
-  .top {
+  #top {
     width: 80%;
   }
   .contents {
@@ -33,7 +33,7 @@
   .name {
     width: 321px;
     height: 192px;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 80px;
     font-weight: bold;
     font-stretch: normal;
@@ -46,7 +46,7 @@
   .job {
     width: 185px;
     height: 36px;
-    font-family: NotoSansJP;
+    font-family: 'Noto Sans JP', sans-serif;;
     font-size: 24px;
     font-weight: bold;
     font-stretch: normal;
@@ -55,12 +55,13 @@
     letter-spacing: 1.73px;
     text-align: left;
     color: #29419c;
+    margin-left: 8px;
   }
   .text {
     margin-top: 96px;
     width: 462px;
     height: 167px;
-    font-family: NotoSansJP;
+    font-family: 'Noto Sans JP', sans-serif;;
     font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
