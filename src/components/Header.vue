@@ -1,14 +1,14 @@
 <template>
   <header>
     <div class="logo">
-      <p class="logo-text">
+      <a href="#top" class="logo-text">
       Portfolio
-      </P>
+      </a>
     </div>
     <ul>
-      <li class="menu skill"><a href="#" class="link">Skill</a></li> 
-      <li class="menu work"><a href="#" class="link">Work</a></li> 
-      <li class="menu about"><a href="#" class="link">About Me</a></li> 
+      <li class="menu skill"><a href="#skill" class="link">Skill</a></li> 
+      <li class="menu work"><a href="#work" class="link">Work</a></li> 
+      <li class="menu about"><a href="#about" class="link">About Me</a></li> 
     </ul>
     <div class="name">
       YAMATO TAKEZAKI
@@ -21,9 +21,9 @@
   width: 125px;
   height: 87px;
   background-color: #f7f9fc;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   box-shadow: 4px 4px 4px rgba(13 ,39, 80, 0.16),
               -4px -4px 3px #ffffff;
   border-radius: 20px;
@@ -33,20 +33,28 @@
   left: 55px;
   background-color: #f7f9fc;
 }
+.logo :hover {
+  box-shadow: -4px -4px 4px rgba(13 ,39, 80, 0.16),
+              4px 4px 3px #ffffff;
+  border-radius: 20px;
+}
 .logo-text {
-  margin: auto;
   font-size: 20px;
-  width: 90px;
   height: 27px;
-  font-family: PlayfairDisplay;
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.35;
   letter-spacing: 0.7px;
-  text-align: right;
   color: #ed433c;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 30px;
 }
 ul {
   text-align: right;
@@ -56,7 +64,6 @@ ul {
 .menu {
   background-color: #f7f9fc;
   list-style: none;
-  width: auto;
   height: 47px;
   box-shadow: 4px 4px 3px rgba(13 ,39, 80, 0.16),
               -4px -4px 3px #ffffff;
@@ -65,6 +72,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.menu :hover {
+  box-shadow: -4px -4px 3px rgba(13 ,39, 80, 0.16),
+              4px 4px 3px #ffffff;
+  border-radius: 5px;
 }
 .skill {
   width: 84px;
@@ -85,23 +97,28 @@ ul {
   left: 61px;
 }
 .link {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.22;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #404040;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 11px
 }
+
 .name {
   position: fixed;
   bottom: 48px;
   left: 49px;
   width: 129px;
   height: 16px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 600;
   font-stretch: normal;
