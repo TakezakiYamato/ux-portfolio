@@ -32,6 +32,7 @@
   top: 54px;
   left: 55px;
   background-color: #f7f9fc;
+  cursor: none;
 }
 .logo :hover {
   box-shadow: -4px -4px 4px rgba(13 ,39, 80, 0.16),
@@ -39,6 +40,7 @@
   border-radius: 20px;
 }
 .logo-text {
+  cursor: none;
   font-size: 20px;
   height: 27px;
   font-family: 'Playfair Display', serif;
@@ -72,6 +74,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: none;
 }
 .menu :hover {
   box-shadow: -4px -4px 3px rgba(13 ,39, 80, 0.16),
@@ -97,6 +100,7 @@ ul {
   left: 61px;
 }
 .link {
+  cursor: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -127,5 +131,6 @@ ul {
   letter-spacing: normal;
   text-align: left;
   color: #555555;
+  cursor: none;
 }
 </style>

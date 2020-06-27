@@ -1,6 +1,7 @@
 <template>
   <v-app id="app">
     <Loading v-show="loading"></Loading>
+    <cursor-fx color="#29419C" color-hover="f00" outside-size="80px" inside-size="8px"></cursor-fx>
     <Header v-show="!loading"></Header>
     <Top/>
     <Skill/>
