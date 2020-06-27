@@ -1,6 +1,7 @@
 <template>
   <v-app id="app">
-    <Header/>
+    <Loading v-show="loading"></Loading>
+    <Header v-show="!loading"></Header>
     <Top/>
     <Skill/>
     <Work/>
@@ -16,22 +17,27 @@ import Skill from './components/Skill';
 import Work from './components/Work';
 import About from './components/About';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
 
 export default {
   name: 'App',
-
+  data: () => ({
+    loading: true
+  }),
   components: {
     Header,
     Top,
     Skill,
     Work,
     About,
-    Footer
+    Footer,
+    Loading
   },
-
-  data: () => ({
-    //
-  }),
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
+  }
 };
 </script>
 <style>

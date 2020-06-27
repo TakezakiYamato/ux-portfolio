@@ -1,14 +1,14 @@
 <template>
   <header>
     <div class="logo">
-      <a href="#top" class="logo-text">
+      <a href="#top" class="logo-text" v-smooth-scroll="{duration: 1200}">
       Portfolio
       </a>
     </div>
     <ul>
-      <li class="menu skill"><a href="#skill" class="link">Skill</a></li> 
-      <li class="menu work"><a href="#work" class="link">Work</a></li> 
-      <li class="menu about"><a href="#about" class="link">About Me</a></li> 
+      <li class="menu skill"><a href="#skill" class="link" v-smooth-scroll="{duration: 1200}">Skill</a></li> 
+      <li class="menu work"><a href="#work" class="link" v-smooth-scroll="{duration: 1200}">Work</a></li> 
+      <li class="menu about"><a href="#about" class="link" v-smooth-scroll="{duration: 1200}">About Me</a></li> 
     </ul>
     <div class="name">
       YAMATO TAKEZAKI

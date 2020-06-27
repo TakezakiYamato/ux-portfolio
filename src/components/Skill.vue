@@ -6,7 +6,7 @@
         <div class="title">
           <h2 class="titleName">Skill</h2>
         </div>
-        <div class="category">
+        <div @click="switchSkill" v-show="show" class="category">
           <div class="categoryName">
             Design SoftWare
           </div>
@@ -45,7 +45,90 @@
             </v-row>
           </div>
         </div>
-        <div class="category">
+        <div v-show="!show" class="category switch">
+          <div class="categoryName">
+            Design SoftWare
+          </div>
+          <div class="contents">
+            <v-row>
+              <v-col cols="6">
+                <div class="chart">
+                  <Design/>
+                </div>
+              </v-col>
+              <v-col cols="6">
+                <div class="chipGroup">
+                  <div class="line">
+                    <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                      XD
+                    </v-chip>
+                    <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                       Figma
+                    </v-chip>
+                  </div>
+                  <div class="line">
+                    <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                      Illustrator
+                    </v-chip>
+                    <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                      Photoshop
+                    </v-chip>
+                  </div>
+                  <div class="line">
+                    <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                      STUDIO
+                    </v-chip>
+                  </div>
+                </div>
+              </v-col>
+            </v-row>
+          </div>
+        </div>
+        <div @click="switchSkill" v-show="!show" class="category">
+          <div class="categoryName">
+            Front End
+          </div>
+          <div class="contents">
+            <v-row>
+              <v-col cols="6">
+                <div class="chart">
+                  <Front/>
+                </div>
+              </v-col>
+                <v-col cols="6">
+                  <div class="chipGroup">
+                    <div class="line">
+                      <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                        HTML
+                      </v-chip>
+                      <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                        CSS
+                      </v-chip>
+                    </div>
+                    <div class="line">
+                      <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                        Javascript
+                      </v-chip>
+                      <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                        Vue.js
+                      </v-chip>
+                    </div>
+                    <div class="line">
+                      <v-chip class="skillName" color="#29419c" text-color="#ffffff">
+                        Vuetify
+                      </v-chip>
+                    </div>
+                    <div class="github">
+                      <a href="https://github.com/">
+                        <font-awesome-icon :icon="['fab', 'github']" class="fa-2x" color="#404040" />
+                      </a>
+                    </div>
+                  </div>
+                </v-col>
+            </v-row>
+          </div>
+        </div>
+        <div v-show="show" class="category switch">
           <div class="categoryName">
             Front End
           </div>
@@ -103,6 +186,16 @@ export default {
   components: {
     Design,
     Front
+  },
+  data () {
+    return {
+      show: true
+    }
+  },
+  methods: {
+    switchSkill: function () {
+      this.show = !this.show
+    }
   }
 }
 </script>
@@ -137,6 +230,10 @@ export default {
   padding-left: 40px;
   margin-top: 64px;
   margin-bottom: 64px;
+}
+.switch {
+  box-shadow: -8px -8px 5px rgba(13, 39, 80, 0.16),
+              8px 8px 5px #ffffff;
 }
 .categoryName {
   margin-bottom: 20px;
